@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>For Trang :33</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="boxheart">
+            <div class="heart"><h1>Bấm vô đi bà :33</h1></div>
+            <div class="beat"></div>
+        </div>
+        <div class="boxchoose">
+            <h2>LÀM BẠN GÁI TUI NHÉ </h2>
+            <div class="listbutton">
+                <button id="no">Never</button>
+                <button id="yes">Okkke</button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="inner">
+                <h3>Tui cũng thích bà lắm (giờ là iuu òi), cái này chỉ mới là demo hoii tuii muốn đợi bà về òi mới nói trực tiếp</h3>
+                <img src="love.gif" alt="" />
+                <p>Tuii đợi bà đi quân sự vê <span>rồi tuiii rước bà đi chơi</span> , nhoé babe</p>
+            </div>
+        </div>
+        <script>
+            const noBtn = document.querySelector("#no");
+            const yesBtn = document.querySelector("#yes");
+            let boxheart = document.querySelector(".boxheart");
+            let boxchoose = document.querySelector(".boxchoose");
+            let popup = document.querySelector(".popup");
+            boxheart.addEventListener("click", function () {
+                boxheart.classList.add("active");
+                boxchoose.classList.add("active");
+            });
+            yesBtn.addEventListener("click", function () {
+                popup.classList.add("active");
+            });
+            noBtn.addEventListener("mouseenter", () => {
+                const top = Math.floor(Math.random() * window.innerHeight);
+                const left = Math.floor(Math.random() * window.innerWidth);
+
+                noBtn.style.top = `${top}px`;
+                noBtn.style.left = `${left}px`;
+            });
+        </script>
+    </body>
+</html>
